@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Практика CSS-селекторов</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Практическая работа</p>
+        <h1>CSS-селекторы</h1>
+        <p>Редактируйте файл <code>style.css</code> и проверяйте результат в браузере.</p>
+      </header>
+
+      <section class="guide" aria-label="Как работать">
+        <strong>Порядок работы:</strong> выполните задание, добавив правило в блок «Ваши решения» файла <code>style.css</code>. После сохранения обновите страницу.
+      </section>
+
+      <section class="tasks">
+        <h2>Задания</h2>
+        <ol>
+          <li><label><input type="checkbox" /> Задайте фиолетовый цвет текста всем элементам с классом <code>.tag</code>.</label></li>
+          <li><label><input type="checkbox" /> Задайте зелёный цвет ссылке «Документация CSS», используя её <code>id</code>.</label></li>
+          <li><label><input type="checkbox" /> Задайте светло-жёлтый фон прямым пунктам списка «Темы». Используйте селектор ребёнка <code>&gt;</code>.</label></li>
+          <li><label><input type="checkbox" /> Задайте жирное начертание второму пункту списка «Темы» через <code>:nth-child()</code>.</label></li>
+          <li><label><input type="checkbox" /> Задайте синюю рамку элементу с атрибутом <code>data-level="easy"</code>.</label></li>
+          <li><label><input type="checkbox" /> При наведении сдвиньте каждый элемент <code>.card</code> вверх. Используйте <code>:hover</code> и <code>transform</code>.</label></li>
+          <li><label><input type="checkbox" /> Измените цвет первого абзаца внутри блока <code>.note</code> через <code>:first-of-type</code>.</label></li>
+          <li><label><input type="checkbox" /> Добавьте символ <code>★</code> перед заголовком третьей карточки через <code>::before</code>.</label></li>
+        </ol>
+      </section>
+
+      <section class="playground" aria-label="Элементы для практики">
+        <article class="card" data-level="easy">
+          <span class="tag">метка 1</span>
+          <h2>Карточка №1</h2>
+          <p>Значение атрибута <code>data-level</code>: <code>easy</code>.</p>
+          <a href="https://developer.mozilla.org/ru/docs/Web/CSS" id="css-docs">Документация CSS</a>
+        </article>
+
+        <article class="card" data-level="medium">
+          <span class="tag">метка 2</span>
+          <h2>Карточка №2</h2>
+          <p>Значение атрибута <code>data-level</code>: <code>medium</code>.</p>
+          <a href="#note">Перейти к заметке</a>
+        </article>
+
+        <article class="card special" data-level="medium">
+          <span class="tag">метка 3</span>
+          <h2>Карточка №3</h2>
+          <p>Элемент для задания с псевдоэлементом.</p>
+        </article>
+      </section>
+
+      <section class="topics">
+        <h2>Темы</h2>
+        <ul>
+          <li>Селекторы типов</li>
+          <li>Классы и идентификаторы</li>
+          <li>Псевдоклассы</li>
+          <li>
+            Комбинаторы
+            <ul>
+              <li>Этот вложенный пункт не должен получить фон в задании №3.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="note" id="note">
+        <h2>Заметка</h2>
+        <p>Первый абзац внутри блока.</p>
+        <p>Второй абзац внутри блока.</p>
+      </section>
+    </main>
+  </body>
+</html>
